@@ -10,20 +10,19 @@ W/S — вверх/вниз (Player 1)
 ↑/↓ — вверх/вниз (Player 2)
 
 # Установка 
+##Через GIT
 Клонируй репозиторий:
-
-
 ```bash
 git clone https://github.com/Kontorin/neo_ping-pong.git
-cd ping_pong
 ```
-
-
+Перейдите в папку проекта
+```bash
+cd neo_ping-pong
+```
 Активируем виртуальное окружение:
 ```bash
-venv\Scripts\activate
+source venv/Scripts/activate
 ```
-
 Запусти игру:
 ```bash
 py main.py
