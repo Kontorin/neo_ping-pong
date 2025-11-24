@@ -56,17 +56,14 @@ class Ball:
             self.rect.left = player_blue.rect.right + 1
             self.speed_x *= -1
             
-            r = uniform(0.5, 1)
+            r = uniform(0.5, 1.5)
             if (self.speed_x < 0):
                 self.speed_x = -BALL_SPEED * r
             else:
                 self.speed_x = BALL_SPEED * r
         
-            self.speed_y = BALL_SPEED * uniform(0.5, 1)
-            print(f"Speed X {self.speed_x}")
-            print(f"Speed Y {self.speed_y}")
+            self.speed_y *= uniform(0.5, 1.5)
 
-                
             new_mine = Mines(MINES_RED)
             self.list_mine.append(new_mine)
             
@@ -74,12 +71,13 @@ class Ball:
             self.rect.right = player_red.rect.left - 1
             self.speed_x *= -1
             
+            r = uniform(0.5, 1.5)
             if (self.speed_x < 0):
-                self.speed_x = -BALL_SPEED * uniform(0.8, 1.5)
+                self.speed_x = -BALL_SPEED * r
             else:
-                self.speed_x = BALL_SPEED * uniform(0.8, 1.5)
+                self.speed_x = BALL_SPEED * r
         
-            self.speed_y = BALL_SPEED * uniform(0.8, 1.5)
+            self.speed_y *= uniform(0.5, 1.5)
                 
             new_mine = Mines(MINES_RED)
             self.list_mine.append(new_mine)
@@ -96,11 +94,9 @@ class Ball:
                     self.speed_x *= uniform(-1.25, -2.5)
                 else:
                     self.speed_x *= -1
-                print(f"Speed X {self.speed_x}")
                 
                 if abs(self.speed_y) < 10:
                     self.speed_y *= uniform(1.25, 2.5)
-                print(f"Speed Y {self.speed_y}")
                 self.list_mine.remove(mine)
 
 class Player:
