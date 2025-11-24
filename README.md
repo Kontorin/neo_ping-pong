@@ -23,8 +23,11 @@ cd neo_ping-pong
 ```bash
 source venv/Scripts/activate
 ```
+```cmd
+python -m pip install pygame
+```
 Запусти игру:
 ```bash
-py main.py
+python main.py
 ```
 
